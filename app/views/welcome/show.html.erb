@@ -1,0 +1,26 @@
+<div class="project-subpage">
+    <div class="navbar">
+        <div class="container">
+            <span><%= image_tag("nav_icon.svg") %></span>
+            <span class="navbar_button">
+                <a href="/#page-home">HOME</a>
+                <a href="/#page-profile">PROFILE</a>
+                <a href="/#page-languages">LANGUAGES</a>
+                <a href="/#page-skills">SKILLS</a>
+                <a href="/#page-projects">PROJECTS</a>
+                <a href="/#page-education">EDUCATION</a>
+                <a href="/#page-experience">EXPERIENCE</a>
+                <a href="/#page-contact">RÉSUMÉ/CONTACT</a>
+            </span>
+        </div>
+    </div>
+    <h2 class="project-title"><%= @project_name %></h2>
+    <p><%= @project_title %></p>
+    <%= image_tag(@project_image_path) %>
+    <p class="project-description"><%= @project_description %></p>
+    <a id="github-link" href=<%= @project_url %> target="_blank">
+        <%= fa_icon("github") %>
+    </a>
+    <div class="spacer"></div>
+    <a class="btn btn-primary" href="/#page-projects">Close Project</a>
+</div>

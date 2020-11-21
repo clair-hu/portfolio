@@ -17,6 +17,11 @@ h1, h2, h3 {
     font-family: Oxygen,sans-serif;
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
 
 /*** navbar styles ***/
 .navbar {
@@ -192,4 +197,43 @@ h1, h2, h3 {
 .page-contact {
     padding: 75px;
     background: white;
+}
+
+.project-subpage {
+    text-align: center;
+    padding: 5rem 0;
+
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.4);
+
+        a {
+            color: white;
+        }
+    }
+
+    .project-title {
+        color: #757575;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #757575;
+        margin-bottom: 2rem;
+    }
+
+    img {
+        margin-bottom: 3rem;
+    }
+    
+    .fa {
+        font-size: 3rem;
+        color:black;
+    }
+
+    .spacer {
+        background-color: white;
+        margin-bottom: 2rem;
+    }
+
 }

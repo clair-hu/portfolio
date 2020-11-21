@@ -14,8 +14,10 @@ ActiveRecord::Schema.define(version: 2020_11_21_181605) do
 
   create_table "projects", force: :cascade do |t|
     t.string "name"
+    t.text "title"
     t.text "description"
     t.string "url"
+    t.string "img_path"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
