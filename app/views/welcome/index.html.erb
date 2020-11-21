@@ -58,7 +58,7 @@
             <h2 class="subpage-title">title</h2>
             <div class="spacer"></div>
             <p class="subpage-subtitle">here to put the subtitle</p>
-        </header>
+        </header>   
         <div class="page-content">
 
         </div>
@@ -81,12 +81,15 @@
 <div class="page-projects" id="page-projects">
     <div class="container">
         <header class="subpage-header">
-            <h2 class="subpage-title">title</h2>
+            <h2 class="subpage-title">Projects</h2>
             <div class="spacer"></div>
             <p class="subpage-subtitle">here to put the subtitle</p>
         </header>
         <div class="page-content">
-
+            <% @projects.each do |project|%>
+                <p><%= project.name %></p>
+                <a href="/projects/<%= project.id %>"><%= project.name %></a>
+            <% end %>
         </div>
     </div>
 </div>
