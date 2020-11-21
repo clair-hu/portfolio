@@ -1,6 +1,8 @@
 class WelcomeController < ApplicationController
   def index
     @projects = Project.all
+    @language_progresses = { "java" => 90, "python" => 80, "sql" => 70, "ruby" => 60, 
+                            "c/c++" => 50, "javascript" => 40, "scala" => 30, "go" => 20}
   end
 
   def show

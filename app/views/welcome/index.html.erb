@@ -55,12 +55,74 @@
 <div class="page-languages" id="page-languages">
     <div class="container">
         <header class="subpage-header">
-            <h2 class="subpage-title">title</h2>
+            <h2 class="subpage-title">LANGUAGES</h2>
             <div class="spacer"></div>
-            <p class="subpage-subtitle">here to put the subtitle</p>
-        </header>   
+            <p class="subpage-subtitle">Codely Speaking</p>
+        </header>
         <div class="page-content">
-
+            <!-- todo fix the for loop -->
+            <!-- <% @language_progresses.each do |language|%>
+                <div id="progress">
+                    <button id="ruby-text" onclick="move("ruby", 0, 60)"></button>
+                    <div class="progress-bar" id="progress-bar-ruby">1%</div>
+                </div>
+            <% end %> -->
+            <div class="progress-container">
+                <button id="java-text" onclick="move('java')"></button>
+                <div id="progress">
+                    <div class="progress-bar" id="progress-bar-java">1%</div>
+                </div>
+            </div>
+            <br>
+            <div class="progress-container">
+                <button id="python-text" onclick="move('python')"></button>
+                <div id="progress">
+                    <div class="progress-bar" id="progress-bar-python">1%</div>
+                </div>
+            </div>
+            <br>
+            <div class="progress-container">
+                <button id="sql-text" onclick="move('sql')"></button>
+                <div id="progress">
+                    <div class="progress-bar" id="progress-bar-sql">1%</div>
+                </div>
+            </div>
+            <br>
+            <div class="progress-container">
+                <button id="ruby-text" onclick="move('ruby')"></button>
+                <div id="progress">
+                    <div class="progress-bar" id="progress-bar-ruby">1%</div>
+                </div>
+            </div>
+            <br>
+            <div class="progress-container">
+                <button id="c/c++-text" onclick="move('c/c++')"></button>
+                <div id="progress">
+                    <div class="progress-bar" id="progress-bar-c/c++">1%</div>
+                </div>
+            </div>
+            <br>
+            <div class="progress-container">
+                <button id="javascript-text" onclick="move('javascript')"></button>
+                <div id="progress">
+                    <div class="progress-bar" id="progress-bar-javascript">1%</div>
+                </div>
+            </div>
+            <br>
+            <div class="progress-container">
+                <button id="scala-text" onclick="move('scala')"></button>
+                <div id="progress">
+                    <div class="progress-bar" id="progress-bar-scala">1%</div>
+                </div>
+            </div>
+            <br>
+            <div class="progress-container">
+                <button id="go-text" onclick="move('go')"></button>
+                <div id="progress">
+                    <div class="progress-bar" id="progress-bar-go">1%</div>
+                </div>
+            </div>
+            <br>
         </div>
     </div>
 </div>
@@ -132,3 +194,49 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    var language_progress = {
+        "java": 90,
+        "python": 80,
+        "sql": 70,
+        "ruby": 60,
+        "c/c++": 50,
+        "javascript": 40,
+        "scala": 30,
+        "go": 20
+    }
+
+    function move(language) {
+        var percent = language_progress[language];
+        var i = 0;
+        if (i === 0) {
+            i = 1
+            var elem = document.getElementById("progress-bar-" + language);
+            var width = 1;
+            var id = setInterval(frame, 10);
+            console.log("move");
+            function frame() {
+                if (width >= percent) {
+                    clearInterval(id);
+                    i = 0;
+                } else {
+                    width++;
+                    elem.style.width = width + "%";
+                    elem.innerHTML = width  + "%";
+                }
+            }
+        }
+    }
+    
+    if (window.location.hash === '' || window.location.hash === '#page-languages' 
+            || window.location.hash === '#page-profile' || window.location.hash === '#page-home'
+            || window.location.hash === '#page-skills' || window.location.hash === '#page-projects'
+            || window.location.hash === '#page-education' || window.location.hash === '#page-experience'
+            || window.location.hash === '#page-contact') {
+        for (var language in language_progress) {
+            document.getElementById(language + '-text').innerHTML = language.toUpperCase();
+            move(language);
+        }
+    }
+  </script>
