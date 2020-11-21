@@ -30,11 +30,17 @@
             <%= fa_icon("envelope") %>
         </a>
     </div>
-    <a href="#page-profile" class="btn btn-default">MORE</a>
+    <button class="btn btn-default" id="btn-more" onclick="scroll()">MORE</a>
 </div>
 
 <div class="page-profile" id="page-profile">
-
+    <div class="container">
+        
+    </div>
 </div>
 
-<%= javascript_pack_tag('index_helper') %>
+<script>
+    function scrollBtnOnClick() {
+        document.getElementById("page-profile").scrollIntoView({behavior: "smooth"});
+    }
+</script>
