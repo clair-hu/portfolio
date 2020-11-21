@@ -5,6 +5,20 @@ h1 {
     font-size: 5rem;
 }
 
+h2 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+h1, h2, h3 {
+    font-family: Oxygen,sans-serif;
+}
+
+
+/*** navbar styles ***/
 .navbar {
     background-color: rgba(255,255,255,.75);
     position: fixed;
@@ -32,6 +46,7 @@ h1 {
     }   
 }
 
+/*** home page styles ***/
 .page-home {
     width: 100%;
     height: 100%;
@@ -68,10 +83,6 @@ h1 {
         margin: 0 auto;
         color: white; // TODO update based on the final background image
         padding-top: 20%;
-
-        p {
-            font-size: 1.5rem;
-        }
     }
 
     .social-icons {
@@ -98,11 +109,6 @@ h1 {
     }
 }
 
-.page-profile {
-    padding: 75px;
-    background: white;
-}
-
 .btn.btn-default {
     margin: 40px auto 0;
     background: 0 0;
@@ -120,4 +126,70 @@ h1 {
     pointer-events: auto;
     border-color: #fff;
     transition: all .1s ease-in-out;
+}
+
+/*** subpages styles ***/
+.subpage-header {
+    text-align: center;
+
+    .subpage-title {
+        color: #555;
+        letter-spacing: 0.4rem;
+        text-transform: uppercase;
+        padding: 20px 0;
+    }
+
+    .subpage-subtitle {
+        color: gray;
+        padding: 30px 0;
+    }
+}
+
+.spacer {
+    width: 100px;
+    height: 2px;
+    margin: auto;
+    background: #3498db;
+}
+
+/*** profile page styles ***/
+.page-profile {
+    padding: 75px;
+    background: white;
+}
+
+/*** languages page styles ***/
+.page-languages {
+    padding: 75px;
+    background: #f7f7f7;
+}
+
+/*** skills page styles ***/
+.page-skills {
+    padding: 75px;
+    background: white;
+}
+
+/*** projects page styles ***/
+.page-projects {
+    padding: 75px;
+    background: #f7f7f7;
+}
+
+/*** education page styles ***/
+.page-education {
+    padding: 75px;
+    background: white;
+}
+
+/*** experience page styles ***/
+.page-experience {
+    padding: 75px;
+    background: #f7f7f7;
+}
+
+/*** contact page styles ***/
+.page-contact {
+    padding: 75px;
+    background: white;
 }
