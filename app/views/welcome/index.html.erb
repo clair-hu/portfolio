@@ -3,6 +3,7 @@
         <span><%= image_tag("nav_icon.svg") %></span>
         <span class="navbar_button">
             <a href="#page-home">HOME</a>
+            <a href="#page-profile">PROFILE</a>
         </span>
     </div>
 </div>
@@ -14,7 +15,7 @@
         <div class="row">
             <header>
                 <h1>Clair Hu</h1>
-                <h3>Software Engineer</h3>
+                <p>Software Engineer</p>
             </header>
         </div>    
     </div>
@@ -29,6 +30,11 @@
             <%= fa_icon("envelope") %>
         </a>
     </div>
+    <a href="#page-profile" class="btn btn-default">MORE</a>
+</div>
+
+<div class="page-profile" id="page-profile">
+
 </div>
 
 <%= javascript_pack_tag('index_helper') %>
