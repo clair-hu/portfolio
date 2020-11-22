@@ -13,7 +13,7 @@ p {
     font-size: 1.5rem;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: Oxygen,sans-serif;
 }
 
@@ -242,6 +242,28 @@ h1, h2, h3 {
 .page-education {
     padding: 75px;
     background: white;
+    display: flex;
+    flex-wrap: wrap;
+
+    .education-section {
+        position: relative;
+        width: 40%;
+        float: left;
+        margin-bottom: 1.5rem;
+        margin-left: 5rem;
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
 }
 
 /*** experience page styles ***/
