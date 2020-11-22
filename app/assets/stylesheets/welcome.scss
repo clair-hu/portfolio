@@ -307,9 +307,15 @@ h1, h2, h3, h4 {
 }
 
 /*** contact page styles ***/
-.page-contact {
+#page-contact{
     padding: 75px;
-    background: white;
+	background: #3498db;
+    color:#fff;
+    text-align: center;
+
+    a {
+        color: white;
+    }
 }
 
 .project-subpage {
