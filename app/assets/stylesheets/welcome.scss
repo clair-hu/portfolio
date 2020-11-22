@@ -281,6 +281,29 @@ h1, h2, h3, h4 {
 .page-experience {
     padding: 75px;
     background: #f7f7f7;
+    display: flex;
+    flex-wrap: wrap;
+
+    .experience-section {
+        position: relative;
+        width: 30%;
+        text-align: center;
+        float: left;
+        margin-bottom: 1.5rem;
+        margin-left: 1.5rem;
+  
+        img {
+            height: 6rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
 }
 
 /*** contact page styles ***/
