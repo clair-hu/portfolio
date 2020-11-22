@@ -26,7 +26,6 @@
         </div>    
     </div>
     <div class="social-icons">
-        <!-- Todo use for loop -->
         <a href="https://github.com/clair-hu" class="btn btn-round btn-clear social-icons" target="_blank">
             <%= fa_icon("github") %>
         </a>
@@ -66,69 +65,14 @@
             <p class="subpage-subtitle">Codely Speaking</p>
         </header>
         <div class="page-content">
-            <!-- todo fix the for loop -->
-            <!-- <% @language_progresses.each do |language|%>
-                <div id="progress">
-                    <button id="ruby-text" onclick="move("ruby", 0, 60)"></button>
-                    <div class="progress-bar" id="progress-bar-ruby">1%</div>
+            <% @language_progresses.each do |key, value| %>
+                <div class="progress-container">
+                    <button id="<%= key %>-text" onclick='update_progress("<%= key %>", "<%= value %>")'></button>
+                    <div id="progress">
+                        <div class="progress-bar" id="progress-bar-<%= key %>">1%</div>
+                    </div>
                 </div>
-            <% end %> -->
-            <div class="progress-container">
-                <button id="java-text" onclick="move('java')"></button>
-                <div id="progress">
-                    <div class="progress-bar" id="progress-bar-java">1%</div>
-                </div>
-            </div>
-            <br>
-            <div class="progress-container">
-                <button id="python-text" onclick="move('python')"></button>
-                <div id="progress">
-                    <div class="progress-bar" id="progress-bar-python">1%</div>
-                </div>
-            </div>
-            <br>
-            <div class="progress-container">
-                <button id="sql-text" onclick="move('sql')"></button>
-                <div id="progress">
-                    <div class="progress-bar" id="progress-bar-sql">1%</div>
-                </div>
-            </div>
-            <br>
-            <div class="progress-container">
-                <button id="ruby-text" onclick="move('ruby')"></button>
-                <div id="progress">
-                    <div class="progress-bar" id="progress-bar-ruby">1%</div>
-                </div>
-            </div>
-            <br>
-            <div class="progress-container">
-                <button id="c/c++-text" onclick="move('c/c++')"></button>
-                <div id="progress">
-                    <div class="progress-bar" id="progress-bar-c/c++">1%</div>
-                </div>
-            </div>
-            <br>
-            <div class="progress-container">
-                <button id="javascript-text" onclick="move('javascript')"></button>
-                <div id="progress">
-                    <div class="progress-bar" id="progress-bar-javascript">1%</div>
-                </div>
-            </div>
-            <br>
-            <div class="progress-container">
-                <button id="scala-text" onclick="move('scala')"></button>
-                <div id="progress">
-                    <div class="progress-bar" id="progress-bar-scala">1%</div>
-                </div>
-            </div>
-            <br>
-            <div class="progress-container">
-                <button id="go-text" onclick="move('go')"></button>
-                <div id="progress">
-                    <div class="progress-bar" id="progress-bar-go">1%</div>
-                </div>
-            </div>
-            <br>
+            <% end %>
         </div>
     </div>
 </div>
@@ -141,39 +85,16 @@
             <p class="subpage-subtitle">Turning knowledge into tools</p>
         </header>
         <div class="page-content">
-            <div class="skill-section">
-            <!-- todo fix the for loop -->
-                <article class="skills">
-                    <%= image_tag("circle-data.png") %>
-                    <br><br>
-                    <h3>Big data, artificial intelligence</h3>
-                    <p>Hadoop, Spark, PyTorch, Tensorflow</p>
-                </article>
-            </div>
-            <div class="skill-section">
-                <article class="skills">
-                    <%= image_tag("circle-webdev.png") %>
-                    <br><br>
-                    <h3>Mobile and web development</h3>
-                    <p>Android, React, Node, Spring, Rest</p>
-                </article>
-            </div>
-            <div class="skill-section">
-                <article class="skills">
-                    <%= image_tag("circle-cloud.png") %>
-                    <br><br>
-                    <h3>Cloud management</h3>
-                    <p>Google cloud, AWS, Azure DevOps</p>
-                </article>
-            </div>
-            <div class="skill-section">
-                <article class="skills">
-                    <%= image_tag("circle-system.png") %>
-                    <br><br>
-                    <h3>Distributed system management</h3>
-                    <p>Kafka, Zookeeper, Thrift, Cocker</p>
-                </article>
-            </div>
+            <% @skills.each do |key, value| %>
+                <div class="skill-section">
+                    <article class="skills">
+                        <%= image_tag(value.first) %>
+                        <br><br>
+                        <h3><%= value.second %></h3>
+                        <p><%= value.third %></p>
+                    </article>
+                </div>
+            <% end %>
         </div>
     </div>
 </div>
@@ -205,7 +126,6 @@
         </header>
         <div class="page-content">
             <div class="education-section">
-                <!-- Todo use for loop -->
                 <article class="education">
                     <a href="https://uwaterloo.ca/" target="_blank">University of Waterloo</a>
                     <p>Canada, 2016-2021, B.SE in Software Engineering</p>
@@ -231,61 +151,23 @@
             <p class="subpage-subtitle">Full Stack, Android, Computer Vision</p>
         </header>
         <div class="page-content">
-            <div class="experience-section">
-                <!-- Todo use for loop -->
-                <article class="experience">
-                    <%= image_tag("circle-ceridian.png") %>
-                    <br><br>
-                    <h3>Ceridian</h3>
-                    <p>Software developer</p>
-                </article>
-            </div>
-            <div class="experience-section">
-                <article class="experience">
-                    <%= image_tag("circle-adp.png") %>
-                    <br><br>
-                    <h3>ADP</h3>
-                    <p>Software developer</p>
-                </article>
-            </div>
-            <div class="experience-section">
-                <article class="experience">
-                    <%= image_tag("circle-kai.png") %>
-                    <br><br>
-                    <h3>Khazanah Americas Inc</h3>
-                    <p>Software developer, Computer vision</p>
-                </article>
-            </div>
-            <div class="experience-section">
-                <article class="experience">
-                    <%= image_tag("circle-woodbine.png") %>
-                    <br><br>
-                    <h3>Woodbine</h3>
-                    <p>Application developer</p>
-                </article>
-            </div>
-            <div class="experience-section">
-                <article class="experience">
-                    <%= image_tag("circle-ibm.png") %>
-                    <br><br>
-                    <h3>IBM</h3>
-                    <p>Software developer</p>
-                </article>
-            </div>
-            <div class="experience-section">
-                <article class="experience">
-                    <%= image_tag("circle-windriver.png") %>
-                    <br><br>
-                    <h3>Wind River</h3>
-                    <p>Software developer</p>
-                </article>
-            </div>
+            <% @experiences.each do |key, value| %>
+                <div class="experience-section">
+                    <article class="experience">
+                        <%= image_tag(value.first) %>
+                        <br><br>
+                        <h3><%= value.second %></h3>
+                        <p><%= value.third %></p>
+                    </article>
+                </div>
+            <% end %>
         </div>
     </div>
 </div>
 
 <div class="page-contact" id="page-contact">
     <div class="container">
+        <!-- Todo use goodle drive link -->
         <a href="zhiqing-clair-hu-resume.pdf" target="_blank" class="btn btn-default">Résumé</a>
         <br><br>
         <a href="mailto:zhiqing.hu.clair@gmail.com">Contact Me</a>
@@ -293,26 +175,13 @@
 </div>
 
 <script type="text/javascript">
-    var language_progress = {
-        "java": 90,
-        "python": 80,
-        "sql": 70,
-        "c/c++": 60,
-        "ruby": 50,
-        "javascript": 40,
-        "scala": 30,
-        "go": 20
-    }
-
-    function move(language) {
-        var percent = language_progress[language];
-        var i = 0;
+    function update_progress(language, percent) {
+        let i = 0;
         if (i === 0) {
             i = 1
             var elem = document.getElementById("progress-bar-" + language);
             var width = 1;
             var id = setInterval(frame, 10);
-            console.log("move");
             function frame() {
                 if (width >= percent) {
                     clearInterval(id);
@@ -325,15 +194,15 @@
             }
         }
     }
-    
+
     if (window.location.hash === '' || window.location.hash === '#page-languages' 
             || window.location.hash === '#page-profile' || window.location.hash === '#page-home'
             || window.location.hash === '#page-skills' || window.location.hash === '#page-projects'
             || window.location.hash === '#page-education' || window.location.hash === '#page-experience'
             || window.location.hash === '#page-contact') {
-        for (var language in language_progress) {
-            document.getElementById(language + '-text').innerHTML = language.toUpperCase();
-            move(language);
-        }
+        <% @language_progresses.each do |key, value| %>
+            document.getElementById('<%= key %>-text').innerHTML = "<%= key %>".toUpperCase();
+            update_progress("<%= key %>", "<%= value %>");
+        <% end %>
     }
-  </script>
+</script>
