@@ -162,6 +162,10 @@ h1, h2, h3, h4 {
 .page-profile {
     padding: 75px;
     background: white;
+
+    p {
+        font-size: 1.3rem;
+    }
 }
 
 /*** languages page styles ***/
@@ -258,19 +262,17 @@ h1, h2, h3, h4 {
         position: relative;
         width: 40%;
         float: left;
-        margin-bottom: 1.5rem;
         margin-left: 5rem;
 
-        h3 {
-            font-size: 1.5rem;
-        }
-
-        h4 {
-            font-size: 1.25rem;
+        a {
+            font-size: 1.45rem;
+            color: #3498DB;
         }
 
         p {
             font-size: 1rem;
+            color: #757575;
+            margin-bottom: 0.625rem;
         }
     }
 }
