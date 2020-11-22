@@ -181,12 +181,14 @@
         <header class="subpage-header">
             <h2 class="subpage-title">Projects</h2>
             <div class="spacer"></div>
-            <p class="subpage-subtitle">here to put the subtitle</p>
+            <p class="subpage-subtitle">Bringing ideas to life</p>
         </header>
         <div class="page-content">
             <% @projects.each do |project|%>
-                <p><%= project.name %></p>
-                <a href="/projects/<%= project.id %>"><%= project.name %></a>
+                <div class="project-section">
+                    <p><%= project.name %></p>
+                    <a href="/projects/<%= project.id %>"><%= project.name %></a>
+                </div>
             <% end %>
         </div>
     </div>
@@ -249,8 +251,8 @@
         "java": 90,
         "python": 80,
         "sql": 70,
-        "ruby": 60,
-        "c/c++": 50,
+        "c/c++": 60,
+        "ruby": 50,
         "javascript": 40,
         "scala": 30,
         "go": 20
