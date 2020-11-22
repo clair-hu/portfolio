@@ -8,12 +8,12 @@ class WelcomeController < ApplicationController
                 "cloud"  => ["circle-cloud.png", "Cloud management", "Google cloud, AWS, Azure DevOps"],
                 "system" => ["circle-system.png", "Distributed system management", "Kafka, Zookeeper, Thrift, Docker"]
               }
-    @experiences = { "ceridian" => ["circle-ceridian.png", "Ceridian", "Software developer"],
-                      "adp" => ["circle-adp.png", "ADP", "Software developer"],
-                      "khazanah" => ["circle-kai.png", "Khazanah Americas Inc", "Software developer, Computer vision"],
-                      "woodbine" => ["circle-woodbine.png", "Woodbine", "Application developer"],
-                      "ibm" => ["circle-ibm.png", "IBM", "Software developer"],
-                      "windriver" => ["circle-windriver.png", "Wind River", "Software deeloper"]
+    @experiences = { "ceridian" => ["circle-ceridian.png", "Ceridian", "Toronto, ON, Canada", "Software developer"],
+                      "adp" => ["circle-adp.png", "ADP", "Missisauga, ON, Canada", "Software developer"],
+                      "khazanah" => ["circle-kai.png", "Khazanah Americas Inc", "San Francisco, CA, United States", "Software developer, Computer vision"],
+                      "woodbine" => ["circle-woodbine.png", "Woodbine", "Etobicoke, ON, Canada", "Application developer"],
+                      "ibm" => ["circle-ibm.png", "IBM", "Ottawa, ON, Canada", "Software developer"],
+                      "windriver" => ["circle-windriver.png", "Wind River", "Ottawa, ON, Canada", "Software deeloper"]
                     }
     
   end
