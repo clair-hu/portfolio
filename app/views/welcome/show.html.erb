@@ -14,13 +14,15 @@
             </span>
         </div>
     </div>
-    <h2 class="project-title"><%= @project_name %></h2>
-    <p><%= @project_title %></p>
-    <%= image_tag(@project_image_path) %>
-    <p class="project-description"><%= @project_description %></p>
-    <a id="github-link" href=<%= @project_url %> target="_blank">
-        <%= fa_icon("github") %>
-    </a>
-    <div class="spacer"></div>
-    <a class="btn btn-primary" href="/#page-projects">Close Project</a>
+    <div class="project-content">
+        <h2 class="project-title"><%= @project_name %></h2>
+        <p><%= @project_title %></p>
+        <%= image_tag(@project_image_path) %>
+        <p class="project-description">More details at my github page 👇</p>
+        <a id="github-link" href=<%= @project_url %> target="_blank">
+            <%= fa_icon("github") %>
+        </a>
+        <div class="spacer"></div>
+        <a class="btn btn-primary" href="/#page-projects">Close Project</a>
+    </div>
 </div>

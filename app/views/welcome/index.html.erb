@@ -15,28 +15,26 @@
 </div>
 
 <div class="page-home" id="page-home">
-    <div id="mosaic"></div>
-    <%= image_tag("home-page.jpg") %>
-    <div class="container"> 
-        <div class="row">
-            <header>
-                <h1>Clair Hu</h1>
-                <p>Software Engineer</p>
-            </header>
-        </div>    
+    <div>
+        <div id="mosaic"></div>
+        <%= image_tag("home-page.jpg") %>
+        <div class="container">
+            <h1>Clair Hu</h1>
+            <p>Software Engineer</p>
+            <div class="social-icons">
+                <a href="https://github.com/clair-hu" class="btn btn-round btn-clear social-icons" target="_blank">
+                    <%= fa_icon("github") %>
+                </a>
+                <a href="https://www.linkedin.com/in/zhiqing-clair-hu/" class="btn btn-round btn-clear social-icons" target="_blank">
+                    <%= fa_icon("linkedin") %>
+                </a>
+                <a href="mailto:zhiqing.hu.clair@gmail.com" class="btn btn-round btn-clear social-icons" target="_blank">
+                    <%= fa_icon("envelope") %>
+                </a>
+            </div>
+            <a class="btn btn-default" id="btn-more" href="#page-profile">MORE</a>
+        </div>
     </div>
-    <div class="social-icons">
-        <a href="https://github.com/clair-hu" class="btn btn-round btn-clear social-icons" target="_blank">
-            <%= fa_icon("github") %>
-        </a>
-        <a href="https://www.linkedin.com/in/zhiqing-clair-hu/" class="btn btn-round btn-clear social-icons" target="_blank">
-            <%= fa_icon("linkedin") %>
-        </a>
-        <a href="mailto:zhiqing.hu.clair@gmail.com" class="btn btn-round btn-clear social-icons" target="_blank">
-            <%= fa_icon("envelope") %>
-        </a>
-    </div>
-    <a class="btn btn-default" id="btn-more" href="#page-profile">MORE</a>
 </div>
 
 <div class="page-profile" id="page-profile">
@@ -109,8 +107,15 @@
         <div class="page-content">
             <% @projects.each do |project|%>
                 <div class="project-section">
+                    <a href="/projects/<%= project.id %>" class="project-link">
+                        <div class="overlay">
+                            <div class="text">
+                                Let's go ✈
+                            </div>
+                        </div>
+                        <%= image_tag("square-" + project.id.to_s + ".png") %>
+                    </a>
                     <p><%= project.name %></p>
-                    <a href="/projects/<%= project.id %>"><%= project.name %></a>
                 </div>
             <% end %>
         </div>
@@ -168,8 +173,7 @@
 
 <div class="page-contact" id="page-contact">
     <div class="container">
-        <!-- Todo use goodle drive link -->
-        <a href="zhiqing-clair-hu-resume.pdf" target="_blank" class="btn btn-default">Résumé</a>
+        <a href="https://drive.google.com/file/d/1G2VMOfTdcN5W570K2iiWxYbRXtABYPti/view?usp=sharing" target="_blank" class="btn btn-default">Résumé</a>
         <br><br>
         <a href="mailto:zhiqing.hu.clair@gmail.com">Contact Me</a>
     </div>
