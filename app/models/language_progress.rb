@@ -1,0 +1,2 @@
+class LanguageProgress < ApplicationRecord
+end

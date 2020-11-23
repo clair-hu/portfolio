@@ -48,7 +48,6 @@
             <!-- TODO add profile pic -->
             <h3>Hi, I'm Clair 👋</h3><br>
             <p>I am a software engineering student from the University of Waterloo. Along the way, I interned at Wind River, IBM, Woodbine, Khazanah Americas Inc, ADP and Ceridian.</p>
-            <p>I used to have lots of ideas. Right now I am trying to bringing them to life.</p>
             <p>Before pandemic, you can find me open swimming, paddling, hiking. These days, you can find me watching movies, listening to podcasts, raising kittens.</p>
             <p>If you're interested in chatting, come reach out to me on <a href="https://www.instagram.com/clairlovesmango/" target="_blank">Instagram</a>!</p>
         </div>
@@ -63,11 +62,11 @@
             <p class="subpage-subtitle">Codely Speaking</p>
         </header>
         <div class="page-content">
-            <% @language_progresses.each do |key, value| %>
+            <% @language_progresses.each do |lg| %>
                 <div class="progress-container">
-                    <button id="<%= key %>-text" onclick='update_progress("<%= key %>", "<%= value %>")'></button>
+                    <button id="<%= lg.language %>-text" onclick='update_progress("<%= lg.language %>", "<%= lg.progress %>")'></button>
                     <div id="progress">
-                        <div class="progress-bar" id="progress-bar-<%= key %>">1%</div>
+                        <div class="progress-bar" id="progress-bar-<%= lg.language %>">1%</div>
                     </div>
                 </div>
             <% end %>
@@ -83,13 +82,13 @@
             <p class="subpage-subtitle">Turning knowledge into tools</p>
         </header>
         <div class="page-content">
-            <% @skills.each do |key, value| %>
+            <% @skills.each do |skill| %>
                 <div class="skill-section">
                     <article class="skills">
-                        <%= image_tag(value.first) %>
+                        <%= image_tag(skill.img_path) %>
                         <br><br>
-                        <h3><%= value.second %></h3>
-                        <p><%= value.third %></p>
+                        <h3><%= skill.category %></h3>
+                        <p><%= skill.framework %></p>
                     </article>
                 </div>
             <% end %>
@@ -156,14 +155,14 @@
             <p class="subpage-subtitle">Full Stack, Android, Computer Vision</p>
         </header>
         <div class="page-content">
-            <% @experiences.each do |key, value| %>
+            <% @experiences.each do |experience| %>
                 <div class="experience-section">
                     <article class="experience">
-                        <%= image_tag(value.first) %>
+                        <%= image_tag(experience.img_path) %>
                         <br><br>
-                        <h3><%= value.second %></h3>
-                        <p><%= value.third %></p>
-                        <p><%= value.fourth %></p>
+                        <h3><%= experience.company %></h3>
+                        <p><%= experience.location %></p>
+                        <p><%= experience.job_title %></p>
                     </article>
                 </div>
             <% end %>
@@ -205,9 +204,9 @@
             || window.location.hash === '#page-skills' || window.location.hash === '#page-projects'
             || window.location.hash === '#page-education' || window.location.hash === '#page-experience'
             || window.location.hash === '#page-contact') {
-        <% @language_progresses.each do |key, value| %>
-            document.getElementById('<%= key %>-text').innerHTML = "<%= key %>".toUpperCase();
-            update_progress("<%= key %>", "<%= value %>");
+        <% @language_progresses.each do |lg| %>
+            document.getElementById('<%= lg.language %>-text').innerHTML = "<%= lg.language %>".toUpperCase();
+            update_progress("<%= lg.language %>", "<%= lg.progress %>");
         <% end %>
     }
 </script>

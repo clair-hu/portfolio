@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_21_181605) do
+ActiveRecord::Schema.define(version: 2020_11_23_034849) do
+
+  create_table "experiences", force: :cascade do |t|
+    t.text "img_path"
+    t.text "company"
+    t.text "location"
+    t.text "job_title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "language_progresses", force: :cascade do |t|
+    t.text "language"
+    t.integer "progress"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string "name"
@@ -18,6 +34,14 @@ ActiveRecord::Schema.define(version: 2020_11_21_181605) do
     t.text "description"
     t.string "url"
     t.string "img_path"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.text "img_path"
+    t.text "category"
+    t.text "framework"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
